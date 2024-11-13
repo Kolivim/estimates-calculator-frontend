@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Greetings from "./Greetings";
+import axios from 'axios';
 
 const Dreetings = (props) => <div>Ha ha! {props.firstNameq} {props.lastNameq}!</div>;
 
@@ -24,13 +25,12 @@ function App() {
         </div>
 
         <div>
-          <Dreetings firstNameq="Jey" lastNameq="Kock" />
+            <Dreetings firstNameq="Jey" lastNameq="Kock" />
         </div>
 
         <div>
           <Greetings firstName="Nick" lastName="Todd" />
         </div>
-
 
 
       </header>
