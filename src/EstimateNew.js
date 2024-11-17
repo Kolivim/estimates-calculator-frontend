@@ -16,7 +16,7 @@ function EstimateNew() {
     const [appState, setAppState] = useState(
         {
             loading: false,
-            persons: null,
+            estimates: null,
         }
     )
 
@@ -24,10 +24,10 @@ function EstimateNew() {
         setAppState({loading: true})
         const apiUrl = 'http://localhost:8081/front/plist';
         axios.get(apiUrl).then((resp) => {
-            const allPersons = resp.data;
+            const allEstimates = resp.data;
             setAppState({
                 loading: false,
-                persons: allPersons
+                estimates: allEstimates
             });
         });
     }, [setAppState]);
@@ -35,7 +35,7 @@ function EstimateNew() {
 
     return (
         <div className="app">
-            <DataLoading isLoading={appState.loading} persons={appState.persons} />
+            <DataLoading isLoading={appState.loading} estimates={appState.estimates} />
         </div>
     );
 }

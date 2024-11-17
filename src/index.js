@@ -24,7 +24,8 @@ root.render(
 
       <EstimateNew />
 
-      <Estimate />
+      {/*<Estimate />*/}
+
   </React.StrictMode>
 
 
