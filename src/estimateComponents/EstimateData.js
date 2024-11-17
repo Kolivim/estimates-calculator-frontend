@@ -14,10 +14,15 @@ function EstimateData(props) {
                 <thead>
                 <tr>
                     <th>id</th>
-                    <th>firstName</th>
-                    <th>lastName</th>
-                    <th>email</th>
-                    <th>phone</th>
+                    <th>name</th>
+                    <th>description</th>
+                    <th>lastAuthorId</th>
+                    <th>lastModifiedDate</th>
+                    <th>version</th>
+                    <th>workPriceListId</th>
+                    <th>materialPriceListId</th>
+                    {/*<th>estimateElementDtoList</th>*/}
+                    {/*<th>estimateElementInfoDtoList</th>*/}
                 </tr>
                 </thead>
                 <tbody>
@@ -25,10 +30,16 @@ function EstimateData(props) {
                     estimates.map((estimates) =>
                         <tr key={estimates.id}>
                             <td>{estimates.id}</td>
-                            <td>{estimates.firstName}</td>
-                            <td>{estimates.lastName}</td>
-                            <td>{estimates.email}</td>
-                            <td>{estimates.phone}</td>
+                            <td>{estimates.name}</td>
+                            <td>{estimates.description}</td>
+                            <td>{estimates.lastAuthorId}</td>
+                            <td>{estimates.lastModifiedDate}</td>
+                            <td>{estimates.version}</td>
+                            <td>{estimates.workPriceListId}</td>
+                            <td>{estimates.materialPriceListId}</td>
+                            {/* Листы через map перебирать нужно: */}
+                            {/*<td>{estimates.estimateElementDtoList}</td>*/}
+                            {/*<td>{estimates.estimateElementInfoDtoList}</td>*/}
                         </tr>
                     )
                 }

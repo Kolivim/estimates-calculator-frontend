@@ -22,7 +22,7 @@ function EstimateNew() {
 
     useEffect(() => {
         setAppState({loading: true})
-        const apiUrl = 'http://localhost:8081/front/plist';
+        const apiUrl = 'http://localhost:8081/api/v1/estimate/all';                                                     // const apiUrl = 'http://localhost:8081/front/plist';
         axios.get(apiUrl).then((resp) => {
             const allEstimates = resp.data;
             setAppState({
