@@ -22,11 +22,12 @@ function EstimateData(props) {
                     <th>workPriceListId</th>
                     <th>materialPriceListId</th>
                     {/*<th>estimateElementDtoList</th>*/}
-                    {/*<th>estimateElementInfoDtoList</th>*/}
+                    <th>estimateElementInfoDto.estimateElementDto.id</th>
                 </tr>
                 </thead>
                 <tbody>
                 {
+
                     estimates.map((estimates) =>
                         <tr key={estimates.id}>
                             <td>{estimates.id}</td>
@@ -39,9 +40,47 @@ function EstimateData(props) {
                             <td>{estimates.materialPriceListId}</td>
                             {/* Листы через map перебирать нужно: */}
                             {/*<td>{estimates.estimateElementDtoList}</td>*/}
-                            {/*<td>{estimates.estimateElementInfoDtoList}</td>*/}
+                            <td>{estimates.estimateElementInfoDtoList.map((estimateElementInfoDto) =>
+                                    <tr key={estimateElementInfoDto.estimateElementDto.id}>
+                                        <td>{estimateElementInfoDto.estimateElementDto.id}</td>
+                                        {/*estimateElementInfoDto.id*/}
+                                    </tr>
+                                )}</td>
                         </tr>
                     )
+
+                    // estimates.estimateElementInfoDtoList.map((estimateElementInfoDto) =>
+                    //     <tr key={estimateElementInfoDto.id}>
+                    //         <td>{estimateElementInfoDto.id}</td>
+                    //         <td>{estimateElementInfoDto.name}</td>
+                    //         <td>{estimateElementInfoDto.description}</td>
+                    //         <td>{estimateElementInfoDto.lastAuthorId}</td>
+                    //         <td>{estimateElementInfoDto.lastModifiedDate}</td>
+                    //         <td>{estimateElementInfoDto.version}</td>
+                    //         <td>{estimateElementInfoDto.workPriceListId}</td>
+                    //         <td>{estimateElementInfoDto.materialPriceListId}</td>
+                    //         {/* Листы через map перебирать нужно: */}
+                    //         {/*<td>{estimates.estimateElementDtoList}</td>*/}
+                    //         <td>{estimateElementInfoDto.estimateElementDto.estimateId}</td>
+                    //     </tr>
+                    // )
+
+                    // estimates.map((estimates) =>
+                    //     <tr key={estimates.id}>
+                    //         <td>{estimates.id}</td>
+                    //         <td>{estimates.name}</td>
+                    //         <td>{estimates.description}</td>
+                    //         <td>{estimates.lastAuthorId}</td>
+                    //         <td>{estimates.lastModifiedDate}</td>
+                    //         <td>{estimates.version}</td>
+                    //         <td>{estimates.workPriceListId}</td>
+                    //         <td>{estimates.materialPriceListId}</td>
+                    //         {/* Листы через map перебирать нужно: */}
+                    //         {/*<td>{estimates.estimateElementDtoList}</td>*/}
+                    //         {/*<td>{estimates.estimateElementInfoDtoList}</td>*/}
+                    //     </tr>
+                    // )
+
                 }
                 </tbody>
             </table>
