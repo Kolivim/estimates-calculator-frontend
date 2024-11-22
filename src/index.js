@@ -5,9 +5,14 @@ import App from './App';
 import Estimate from './Estimate';
 import EstimateNew from './EstimateNew';
 import reportWebVitals from './reportWebVitals';
+import LoginForm from './LoginForm';
 
 
 import Appax from './Appax';
+import FormContainer from "./FormContainer";
+import ControlledFormComponent from "./ControlledFormComponent";
+import {MyInput} from "./MyInput";
+// import Inn from './Inn';
 // import React, { useEffect, useState } from 'react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,9 +27,24 @@ root.render(
       {/* Рабочее !*/}
       {/*<Appax />*/}
 
+
       <EstimateNew />
 
+
       {/*<Estimate />*/}
+
+      {/*<LoginForm />*/}
+
+      {/*<div>*/}
+      {/*    <FormContainer />*/}
+      {/*</div>*/}
+
+      {/*<Inn/>*/}
+
+      {/*<ControlledFormComponent />*/}
+
+      <MyInput />
+
 
   </React.StrictMode>
 
