@@ -15,6 +15,10 @@ import {MyInput} from "./MyInput";
 // import Inn from './Inn';
 // import React, { useEffect, useState } from 'react';
 
+import RouterMy from './componentsInput/RouterMy';
+
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // var cors = require('cors')
@@ -26,9 +30,6 @@ root.render(
 
       {/* Рабочее !*/}
       {/*<Appax />*/}
-
-
-      <EstimateNew />
 
 
       {/*<Estimate />*/}
@@ -43,7 +44,10 @@ root.render(
 
       {/*<ControlledFormComponent />*/}
 
+
+      <EstimateNew />
       <MyInput />
+      <RouterMy />
 
 
   </React.StrictMode>
