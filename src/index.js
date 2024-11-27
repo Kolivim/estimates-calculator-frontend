@@ -18,6 +18,7 @@ import {MyInput} from "./MyInput";
 import RouterMy from './componentsInput/RouterMy';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import AppTms from "./tms/AppTms";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -45,10 +46,11 @@ root.render(
       {/*<ControlledFormComponent />*/}
 
 
-      <EstimateNew />
+      {/*<EstimateNew />* Рабочее */}
       <MyInput />
       <RouterMy />
 
+      {/*<AppTms />*/}
 
   </React.StrictMode>
 
