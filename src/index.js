@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './test/App';
 import Estimate from './Estimate';
 import EstimateNew from './EstimateNew';
 import reportWebVitals from './reportWebVitals';
@@ -47,10 +47,12 @@ root.render(
 
 
       {/*<EstimateNew />* Рабочее */}
-      <MyInput />
-      <RouterMy />
+      {/*<MyInput />*/}
+      {/*<RouterMy />*/}
 
       {/*<AppTms />*/}
+
+      <App />
 
   </React.StrictMode>
 

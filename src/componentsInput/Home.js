@@ -3,6 +3,8 @@ import {useLocation} from "react-router-dom";
 import React, {useEffect, useState} from 'react'
 import LoadingEstimateData from "../estimateComponents/LoadingEstimateData";
 import EstimateData from "../estimateComponents/EstimateData";
+import LoadingOneEstimateData from "../estimateComponents/LoadingOneEstimateData";
+import OneEstimateData from "../estimateComponents/OneEstimateData";
 import axios from "axios";
 
 function Home() {
@@ -18,7 +20,8 @@ function Home() {
     console.log('text = ' + text)
     console.log('text1 = ' + text1)
 
-    const DataLoading =  LoadingEstimateData(EstimateData);
+    // const DataLoading =  LoadingOneEstimateData(OneEstimateData);
+    const DataLoading =  OneEstimateData;
 
     const [appState, setAppState] = useState(
         {
@@ -29,21 +32,24 @@ function Home() {
 
     useEffect(() => {
         setAppState({loading: true})
-        const apiUrl = 'http://localhost:8081/api/v1/estimate/all';                                                     // const apiUrl = 'http://localhost:8081/front/plist';
+        const apiUrl = 'http://localhost:8081/api/v1/estimate' + text;                                                     // const apiUrl = 'http://localhost:8081/front/plist';
         axios.get(apiUrl).then((resp) => {
-            const allEstimates = resp.data;
+            const estimate = resp.data;
+
+            console.log(resp)
+
             setAppState({
                 loading: false,
-                estimates: allEstimates
+                estimates: estimate
             });
+
         });
     }, [setAppState]);
 
-    if (text1.size != 0 ) {
+
+    if (text1.size !== 0 ) {
 
         console.log('Получен ID сметного рассчёта = ' + text1)
-
-
 
         // getTask(id, token)
         //     .then((responce) => {
@@ -63,8 +69,10 @@ function Home() {
     // return <h2>Добро пожаловать на главную страницу</h2>;
 
     return (
-        <div className="home">
-            <DataLoading isLoading={appState.loading} estimates={appState.estimates} />
+        <div className="app">
+            <DataLoading isLoading={appState.loading} estimate={appState.estimate} />
+
+            {/*<DataLoading> appState.estimate </ DataLoading>*/}
         </div>
     );
 }

@@ -32,7 +32,6 @@ function EstimateNew() {
         });
     }, [setAppState]);
 
-
     return (
         <div className="app">
             <DataLoading isLoading={appState.loading} estimates={appState.estimates} />
