@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './test/App';
+import App from './estimate/App';
+// import App from './test/App';
 import Estimate from './Estimate';
 import EstimateNew from './EstimateNew';
 import reportWebVitals from './reportWebVitals';
@@ -18,7 +19,8 @@ import {MyInput} from "./MyInput";
 import RouterMy from './componentsInput/RouterMy';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import AppTms from "./tms/AppTms";
+// import AppTms from "./tms/AppTms";
+import AppTms from "./estimate/AppTms";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -45,14 +47,19 @@ root.render(
 
       {/*<ControlledFormComponent />*/}
 
+      {/** Рабочее */}
+      {/*<EstimateNew />*/}
 
-      {/*<EstimateNew />* Рабочее */}
-      {/*<MyInput />*/}
+      {/** Рабочее: Поле для ввода UUID и перехода на страницу с ним*/}
+      <MyInput />
+
+      {/** Рабочее */}
       {/*<RouterMy />*/}
 
-      {/*<AppTms />*/}
+      {/** Роутер: Слушает опубликованные в нём адреса и при обращении к ним с браузера переходит к соответствующей JS'ке */}
+      <AppTms />
 
-      <App />
+      {/*<App />*/}
 
   </React.StrictMode>
 

@@ -5,12 +5,28 @@ import {useLocation} from "react-router-dom";
 // const baseURL = "http://localhost:8081/api/v1/estimate/all";
 // const baseURL = "http://localhost:8081/api/v1/estimate/de71a5e2-7e56-44f7-bb29-b86c249dc35e";
 const baseURL = "http://localhost:8081/api/v1/estimate/2505b0ea-6aa9-4758-995b-0b201866d8d4";
+const baseEstimateURL = "http://localhost:8081/api/v1/estimate";
 
 export default function App() {
+
+
+    const emp = useLocation()
+
+    console.log(emp)
+
+    let text = emp.pathname
+
+    let text1 = text.slice(1, text.length);
+
+    console.log('text = ' + text)
+    console.log('text1 = ' + text1)
+
+
+
     const [post, setPost] = React.useState(null);
 
     React.useEffect(() => {
-        fetch(baseURL)
+        fetch(/*baseURL*/ baseEstimateURL + text)
             .then((response) => response.json())
             .then((apiData) => {
                 setPost(apiData);
