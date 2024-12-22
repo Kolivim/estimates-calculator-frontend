@@ -37,36 +37,40 @@ function RouterMy() {
                         </li>
 
 
-                        <li>
-                            {/*<Link to = '/estimate'>*/}
-                            <Link to = {{
-                                pathname: '/est',
-                                search: 'xxxx', hash: 'hhh', key: 'abc123',
-                                state: {}
-                                // state: "12345"
-                            }}>
-                            Главная
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/about'>О нас</Link>
-                        </li>
-                        <li>
-                            <Link to='/contact'>Контакты</Link>
-                        </li>
-                        <li>
-                            <Link to='/111'>111</Link>
-                        </li>
+                        {/*<li>*/}
+                        {/*    /!*<Link to = '/estimate'>*!/*/}
+                        {/*    <Link to = {{*/}
+                        {/*        pathname: '/est',*/}
+                        {/*        search: 'xxxx', hash: 'hhh', key: 'abc123',*/}
+                        {/*        state: {}*/}
+                        {/*        // state: "12345"*/}
+                        {/*    }}>*/}
+                        {/*    Главная*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
+
+                        {/*<li>*/}
+                        {/*    <Link to='/about'>О нас</Link>*/}
+                        {/*</li>*/}
+
+                        {/*<li>*/}
+                        {/*    <Link to='/contact'>Контакты</Link>*/}
+                        {/*</li>*/}
+
+                        {/*<li>*/}
+                        {/*    <Link to='/111'>111</Link>*/}
+                        {/*</li>*/}
+
                     </ul>
                 </nav>
 
                 <Routes>
                     <Route path="/allestimates" element={<EstimateNew />} />
                     <Route path="/findestimate" element={<MyInput />} />
-                    <Route path="/:id" element={<Home />}></Route>
+                    {/*<Route path="/:id" element={<Home />}></Route>*/}
 
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
+                    {/*<Route path="/about" element={<About />} />*/}
+                    {/*<Route path="/contact" element={<Contact />} />*/}
 
                     {/*<Route path="/" element={<Home />} />*/}
 
