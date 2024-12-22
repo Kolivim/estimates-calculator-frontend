@@ -4,7 +4,8 @@ import './index.css';
 import App from './estimate/App';
 // import App from './test/App';
 import Estimate from './Estimate';
-import EstimateNew from './EstimateNew';
+// import EstimateNew from './EstimateNew';
+import EstimateNew from './estimate/EstimateNew';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './LoginForm';
 
@@ -48,7 +49,7 @@ root.render(
       {/*<ControlledFormComponent />*/}
 
       {/** Рабочее */}
-      {/*<EstimateNew />*/}
+      <EstimateNew />
 
       {/** Рабочее: Поле для ввода UUID и перехода на страницу с ним*/}
       <MyInput />
