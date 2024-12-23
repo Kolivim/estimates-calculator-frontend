@@ -45,6 +45,61 @@ export default function App() {
         // });
     // }, []);
 
+    for (var key in post) {
+        console.log('key = ' + key + ': value = ' + post[key]);
+
+        if(key == 'estimateElementInfoDtoList') {
+            console.log('key estimateElementInfoDtoList ' + ': value = ' + post[key]);
+
+            let rrr = post[key];
+
+            console.log('rrr ' + ': value = ' + rrr);
+
+            for (var key2 in rrr) {
+                console.log('key2 = ' + key2 + ': value2 = ' + rrr[key2]);
+
+                let rrr2 = rrr[key2];
+
+                for (var key3 in rrr2) {
+                    console.log('key3 = ' + key3 + ': value3 = ' + rrr2[key3]);
+
+                    if(key3 == 'elementInfoDto') {
+
+                        let rrr3 = rrr2[key3]
+
+                        for (var key4 in rrr3) {
+                            console.log('key4 = ' + key4 + ': value4 = ' + rrr3[key4]);
+
+                            /*
+                            key4 = id: value4 = null
+                            key4 = isDeleted: value4 = null
+                            key4 = elementDto: value4 = [object Object]
+                            key4 = materialElementInfoDtoList: value4 =
+                            key4 = workName: value4 = Монтаж стен гкл
+                            key4 = workPrice: value4 = 450
+                            key4 = quantity: value4 = 43
+                            key4 = totalPrice: value4 = 19350
+                            */
+
+                            /*
+                            var data = ["Яблоко", "Апельсин", "Слива"];
+
+                            data.forEach(function(element, key){
+                                console.log(key + ': ' + element);
+                            });
+                            */
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    // let ttt = post['estimateElementInfoDtoList'];
+    // console.log('key estimateElementInfoDtoList ' + ': value = ' + ttt);
+
     if (!post) return null;
 
     return (
@@ -138,4 +193,21 @@ export default function App() {
 
         </div>
     );
+
+
+    // C1
+    let table = document.createElement('table'); // Торжественно готовим стол
+    let tbody = table.createTBody(); // Пришло время для "сердца" стола
+
+    // тут создадим таблицу с rows рядами и cols колонками
+    for (let i = 0; i < 10; i++) {
+        let row = tbody.insertRow(i); // Добавляем строку для разнообразия
+        for (let m = 0; m < 7; m++) {
+            let cell = row.insertCell(m); // Заполняем ячейку
+            cell.textContent = 'Строка '+ i + ' _ Столбец ' + m; // Устанавливаем содержимое
+        }
+    }
+
+    document.body.appendChild(table);
+    // !C1
 }

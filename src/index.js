@@ -23,6 +23,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // import AppTms from "./tms/AppTms";
 import AppTms from "./estimate/AppTms";
 
+import Test from './Test';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // var cors = require('cors')
@@ -55,11 +57,14 @@ root.render(
       {/** Рабочее: Поле для ввода UUID и перехода на страницу с ним */}
       {/*<MyInput />*/}
 
-      {/** Рабочее, предлагаются варианты все рассчёты/поиск рассчёта */}
+      {/** 1_Рабочее, предлагаются варианты все рассчёты/поиск рассчёта */}
       <RouterMy />
 
-      {/** Роутер: Слушает опубликованные в нём адреса и при обращении к ним с браузера переходит к соответствующей JS'ке */}
+      {/** 1_Роутер: Слушает опубликованные в нём адреса и при обращении к ним с браузера переходит к соответствующей JS'ке */}
       <AppTms />
+
+      {/** 2_Рабочее */}
+      {/*<Test />*/}
 
       {/** Рабочее */}
       {/*<App />*/}
