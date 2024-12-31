@@ -1,0 +1,169 @@
+{
+  "id": "2505b0ea-6aa9-4758-995b-0b201866d8d4",
+  "isDeleted": false,
+  "name": "Смета тест №2",
+  "workPriceListId": "ceb5dd55-b290-4a5e-9c19-4b3563a85e18",
+  "materialPriceListId": "b0c4da9f-ead2-4fcf-ad88-f9775bd86bda",
+  "description": "Смета номер 2",
+  "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+  "lastModifiedDate": 1726772586.681873000,
+  "version": 1,
+  "status": null,
+  "estimateElementDtoList": null,
+  "estimateElementInfoDtoList": [
+    {
+      "id": null,
+      "isDeleted": null,
+      "estimateElementDto": {
+        "id": "94d51024-1798-4a19-8453-3acd3e327d2c",
+        "isDeleted": false,
+        "estimateId": "2505b0ea-6aa9-4758-995b-0b201866d8d4",
+        "elementId": "8bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+        "quantity": 5.0,
+        "workPriceListId": null,
+        "materialPriceListId": null,
+        "description": "estimate element 1",
+        "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+        "lastModifiedDate": 1726690101.647947000,
+        "version": null,
+        "status": "COMPLETED"
+      },
+      "elementInfoDto": {
+        "id": null,
+        "isDeleted": null,
+        "elementDto": {
+          "id": "8bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+          "isDeleted": false,
+          "worksId": "93a747a4-a7df-4056-8354-5e4327460007",
+          "revision": "1",
+          "isParent": false,
+          "parentId": null,
+          "group": 2,
+          "workPriceListId": null,
+          "materialPriceListId": null,
+          "description": "Элемент тест",
+          "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+          "lastModifiedDate": 1724790557.246479000,
+          "version": 1,
+          "status": "COMPLETED"
+        },
+        "materialElementInfoDtoList": [
+          {
+            "id": null,
+            "isDeleted": null,
+            "materialElementDto": {
+              "id": "d76cdac7-5149-48b9-b9cf-5c8ebc9eeb0f",
+              "isDeleted": false,
+              "elementId": "8bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+              "materialId": "d842ff58-bdc5-46c3-be76-39d1170e018e",
+              "quantity": 5.0,
+              "consumptionRate": 1.0,
+              "reductionFactor": 1.0,
+              "numberLayers": 1.0,
+              "layerThickness": 1.0,
+              "description": "материал 1 к работе 1",
+              "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+              "lastModifiedDate": 1725709678.528150000
+            },
+            "materialName": "Гипсокартон влагостойкий",
+            "materialPrice": 300.0,
+            "summaryQuantity": 5.0,
+            "totalQuantityForWork": 25.0,
+            "totalPriceForWork": 7500.0
+          }
+        ],
+        "workName": "Монтаж стен гкл",
+        "workPrice": 450.0,
+        "quantity": 5.0,
+        "totalPrice": 2250.0
+      }
+    },
+    {
+      "id": null,
+      "isDeleted": null,
+      "estimateElementDto": {
+        "id": "102d06ef-bf32-47b4-a7bc-9a87ad72da0a",
+        "isDeleted": false,
+        "estimateId": "2505b0ea-6aa9-4758-995b-0b201866d8d4",
+        "elementId": "7bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+        "quantity": 30.0,
+        "workPriceListId": null,
+        "materialPriceListId": null,
+        "description": "estimate element 2",
+        "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+        "lastModifiedDate": 1732213097.986973000,
+        "version": null,
+        "status": "COMPLETED"
+      },
+      "elementInfoDto": {
+        "id": null,
+        "isDeleted": null,
+        "elementDto": {
+          "id": "7bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+          "isDeleted": false,
+          "worksId": "93a747a4-a7df-4056-8354-5e4327460007",
+          "revision": "2",
+          "isParent": false,
+          "parentId": null,
+          "group": 2,
+          "workPriceListId": null,
+          "materialPriceListId": null,
+          "description": "Элемент тест",
+          "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+          "lastModifiedDate": 1724790557.246479000,
+          "version": 1,
+          "status": "COMPLETED"
+        },
+        "materialElementInfoDtoList": [],
+        "workName": "Монтаж стен гкл",
+        "workPrice": 450.0,
+        "quantity": 30.0,
+        "totalPrice": 13500.0
+      }
+    },
+    {
+      "id": null,
+      "isDeleted": null,
+      "estimateElementDto": {
+        "id": "606a00b4-a7a6-4f0f-bea2-4227b2e2b104",
+        "isDeleted": false,
+        "estimateId": "2505b0ea-6aa9-4758-995b-0b201866d8d4",
+        "elementId": "5bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+        "quantity": 43.0,
+        "workPriceListId": null,
+        "materialPriceListId": null,
+        "description": "estimate element 3",
+        "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+        "lastModifiedDate": 1732213246.849610000,
+        "version": null,
+        "status": "COMPLETED"
+      },
+      "elementInfoDto": {
+        "id": null,
+        "isDeleted": null,
+        "elementDto": {
+          "id": "5bda86b1-7bdd-44b7-b4d4-ebd405815d4c",
+          "isDeleted": false,
+          "worksId": "93a747a4-a7df-4056-8354-5e4327460007",
+          "revision": "1",
+          "isParent": false,
+          "parentId": null,
+          "group": 2,
+          "workPriceListId": null,
+          "materialPriceListId": null,
+          "description": "Элемент тест",
+          "lastAuthorId": "2788e7e3-9e0c-47ea-8798-e987c7d9ab4f",
+          "lastModifiedDate": 1724790557.246479000,
+          "version": 2,
+          "status": "COMPLETED"
+        },
+        "materialElementInfoDtoList": [],
+        "workName": "Монтаж стен гкл",
+        "workPrice": 450.0,
+        "quantity": 43.0,
+        "totalPrice": 19350.0
+      }
+    }
+  ]
+}
+

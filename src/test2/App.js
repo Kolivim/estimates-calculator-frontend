@@ -51,7 +51,7 @@ export default function App() {
     table1.setAttribute("id","tbl");
     let tbody1 = table1.createTBody(); // Пришло время для "сердца" стола
 
-    let i = 0;
+
     for (var key in post) {
         console.log('key = ' + key + ': value = ' + post[key]);
 
@@ -70,15 +70,13 @@ export default function App() {
                 for (var key3 in rrr2) {
                     console.log('key3 = ' + key3 + ': value3 = ' + rrr2[key3]);
 
-                    // let i = 0;
+                    let i = 0;
                     let row = tbody1.insertRow(i); // Добавляем строку для разнообразия
 
                     if(key3 == 'elementInfoDto') {
 
                         let rrr3 = rrr2[key3]       // Тут внутри еще содержится массив с материалами
 
-                        // W1 Здесь добавляем строку с работой :
-                        /*
                         let m = 0;
 
                         for (var key4 in rrr3) {
@@ -128,83 +126,27 @@ export default function App() {
 
                             }
 
+                            /*
+                            key4 = id: value4 = null
+                            key4 = isDeleted: value4 = null
+                            key4 = elementDto: value4 = [object Object]
+                            key4 = materialElementInfoDtoList: value4 =
+                            key4 = workName: value4 = Монтаж стен гкл
+                            key4 = workPrice: value4 = 450
+                            key4 = quantity: value4 = 43
+                            key4 = totalPrice: value4 = 19350
+                            */
 
-                            // key4 = id: value4 = null
-                            // key4 = isDeleted: value4 = null
-                            // key4 = elementDto: value4 = [object Object]
-                            // key4 = materialElementInfoDtoList: value4 =
-                            // key4 = workName: value4 = Монтаж стен гкл
-                            // key4 = workPrice: value4 = 450
-                            // key4 = quantity: value4 = 43
-                            // key4 = totalPrice: value4 = 19350
+                            /*
+                            var data = ["Яблоко", "Апельсин", "Слива"];
 
-
-
-                            // var data = ["Яблоко", "Апельсин", "Слива"];
-                            //
-                            // data.forEach(function(element, key){
-                            //     console.log(key + ': ' + element);
-                            // });
-
+                            data.forEach(function(element, key){
+                                console.log(key + ': ' + element);
+                            });
+                            */
                         }
 
                         i++;
-                        */
-                        // !W1 Здесь добавляем строку с работой
-
-
-                        //  W1_v2
-
-                        let cell = row.insertCell(0); // Заполняем ячейку
-                        cell.textContent = i + '/' + 0 + ' | ' + '-'; // Устанавливаем содержимое первой строки - оставил под номер
-
-
-                        for (var key4 in rrr3) {
-                            console.log('key4 = ' + key4 + ': value4 = ' + rrr3[key4]);
-                            if(key4 == 'workName') {
-                                let rrr4work = rrr3[key4];
-                                console.log('rrr4work = ' + rrr4work);
-                                let cell = row.insertCell(1); // Заполняем вторую ячейку
-                                cell.textContent = i + '/' + 1 + ' | ' + key4 + ' : ' + rrr4work; // Устанавливаем содержимое
-                            }
-                        }
-
-
-                        for (var key4 in rrr3) {
-                            console.log('key4 = ' + key4 + ': value4 = ' + rrr3[key4]);
-                            if(key4 == 'workPrice') {
-                                let rrr4work = rrr3[key4];
-                                console.log('rrr4work = ' + rrr4work);
-                                let cell = row.insertCell(2); // Заполняем третью ячейку
-                                cell.textContent = i + '/' + 2 + ' | ' + key4 + ' : ' + rrr4work; // Устанавливаем содержимое
-                            }
-                        }
-
-
-                        for (var key4 in rrr3) {
-                            console.log('key4 = ' + key4 + ': value4 = ' + rrr3[key4]);
-                            if(key4 == 'quantity') {
-                                let rrr4work = rrr3[key4];
-                                console.log('rrr4work = ' + rrr4work);
-                                let cell = row.insertCell(3); // Заполняем четвертую ячейку
-                                cell.textContent = i + '/' + 3 + ' | ' + key4 + ' : ' + rrr4work; // Устанавливаем содержимое
-                            }
-                        }
-
-
-                        for (var key4 in rrr3) {
-                            console.log('key4 = ' + key4 + ': value4 = ' + rrr3[key4]);
-                            if(key4 == 'totalPrice') {
-                                let rrr4work = rrr3[key4];
-                                console.log('rrr4work = ' + rrr4work);
-                                let cell = row.insertCell(4); // Заполняем пятую ячейку
-                                cell.textContent = i + '/' + 4 + ' | ' + key4 + ' : ' + rrr4work; // Устанавливаем содержимое
-                            }
-                        }
-
-
-                        i++;
-                        //  !W1_v2
 
 
                         //  Здесь добавляем строки с материалами :
@@ -216,8 +158,8 @@ export default function App() {
 
 
                                 // N1: Заводим новую строку и заполняем её данными материала:
-                                // i++;
-                                let row1 = tbody1.insertRow(i); // Добавляем строку для материала
+                                i++;
+                                let row1 = tbody1.insertRow(i); // Добавляем строку для разнообразия
 
 
                                 for (var keyMat in rrr4material) {
@@ -226,8 +168,6 @@ export default function App() {
                                     let rrr4materialOne = rrr4material[keyMat];     // Здесь уже отдельная запись с материалом лежит
                                     console.log('rrr4materialOne = ' + rrr4materialOne);
 
-                                    // M1 Заполняем столбцами созданную строку с материалом, вносим значения в столбцы :
-                                    /*
                                     let mMat = 0;
 
                                     for (var keyMatInfo in rrr4materialOne) {
@@ -237,66 +177,11 @@ export default function App() {
 
                                         console.log('keyMatInfo = ' + keyMatInfo + 'value = ' + matInfo);
 
-
                                         let cellMat = row1.insertCell(mMat); // Заполняем ячейку
                                         cellMat.textContent = i + '/' + mMat + ' | ' + keyMatInfo + ' : ' + matInfo; // Устанавливаем содержимое
                                         mMat++;
-
-                                    }
-                                    */
-                                    // !M1
-
-
-                                    // M1_v2 Заполняем столбцами созданную строку с материалом, вносим значения в столбцы :
-                                    let cellMat = row1.insertCell(0);
-                                    cellMat.textContent = i + '/' + 0 + ' | ' + '-'; // Устанавливаем содержимое для первой ячейки - под номер оставил
-
-
-                                    for (var keyMatInfo in rrr4materialOne) {
-                                        let matInfo = rrr4materialOne[keyMatInfo];
-                                        console.log('keyMatInfo = ' + keyMatInfo + 'value = ' + matInfo);
-
-                                        if(keyMatInfo == 'materialName') {
-                                            let cellMat = row1.insertCell(1);   // Устанавливаем содержимое для второй ячейки - имя работы/материала
-                                            cellMat.textContent = i + '/' + 1 + ' | ' + keyMatInfo + ' : ' + matInfo; // Устанавливаем содержимое
-                                        }
                                     }
 
-
-                                    for (var keyMatInfo in rrr4materialOne) {
-                                        let matInfo = rrr4materialOne[keyMatInfo];
-                                        console.log('keyMatInfo = ' + keyMatInfo + 'value = ' + matInfo);
-
-                                        if(keyMatInfo == 'materialPrice') {
-                                            let cellMat = row1.insertCell(2);   // Устанавливаем содержимое для третьей ячейки - стоимости единицы работы/материала
-                                            cellMat.textContent = i + '/' + 2 + ' | ' + keyMatInfo + ' : ' + matInfo; // Устанавливаем содержимое
-                                        }
-                                    }
-
-
-                                    for (var keyMatInfo in rrr4materialOne) {
-                                        let matInfo = rrr4materialOne[keyMatInfo];
-                                        console.log('keyMatInfo = ' + keyMatInfo + 'value = ' + matInfo);
-
-                                        if(keyMatInfo == 'totalQuantityForWork') {
-                                            let cellMat = row1.insertCell(3);   // Устанавливаем содержимое для четвертой ячейки - totalQuantity работы/материала
-                                            cellMat.textContent = i + '/' + 3 + ' | ' + keyMatInfo + ' : ' + matInfo; // Устанавливаем содержимое
-                                        }
-                                    }
-
-
-                                    for (var keyMatInfo in rrr4materialOne) {
-                                        let matInfo = rrr4materialOne[keyMatInfo];
-                                        console.log('keyMatInfo = ' + keyMatInfo + 'value = ' + matInfo);
-
-                                        if(keyMatInfo == 'totalPriceForWork') {
-                                            let cellMat = row1.insertCell(4);   // Устанавливаем содержимое для пятой ячейки - totalPrice работы/материала
-                                            cellMat.textContent = i + '/' + 4 + ' | ' + keyMatInfo + ' : ' + matInfo; // Устанавливаем содержимое
-                                        }
-                                    }
-                                    // !M1_v2
-
-                                    i++;    // После заполнения строки с материалами увеличиваем на индекс следующей строки на 1, проверить что с несколькими материалами корректно индекс меняется !
                                 }
                                 // !N1
 
